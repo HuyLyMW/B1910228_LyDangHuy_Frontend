@@ -17,7 +17,7 @@ const routes = [
         component: () => import("@/views/ContactEdit.vue"),
         props: true
     },
-
+    
 ];
 
 const router = createRouter({

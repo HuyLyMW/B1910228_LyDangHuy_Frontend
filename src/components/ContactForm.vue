@@ -45,7 +45,7 @@ export default {
     },
     emits: ["submit:contact", "delete:contact"],
     props: {
-        contact: { type: Object, required: true }
+        contact: { type: Object, required: true },
     },
     data() {
         const contactFormSchema = yup.object().shape({
@@ -67,7 +67,8 @@ export default {
                 ),
         });
         return {
-
+            // Chúng ta sẽ không muốn hiệu chỉnh props, nên tạo biến cục bộ
+            // contactLocal để liên kết với các input trên form
             contactLocal: this.contact,
             contactFormSchema,
         };
